@@ -4,12 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Odev
+namespace Odev.Interfaces
 {
-    public enum ShapeType
+    public interface IHasThreeDimension: IHasTwoDimension
     {
-        Rectangle,
-        Circle,
-        Square
+        double LineC { get; set; }
     }
 }

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Odev.Interfaces;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
@@ -8,23 +9,28 @@ using System.Threading.Tasks;
 
 namespace Odev
 {
-    public class Rectangle : Shape
+    public class Rectangle : Shape,IHasTwoDimension
     {
-        public string Parameter { get; private set; }}
-
+        public double LineA { get; set; }
+        public double LineB { get ; set; }
+        public double Height { get { return LineA; } set { } }
+        public Rectangle(double Line_A, double Line_B)
+        {
+            this .LineA = Line_A;
+            this .LineB = Line_B;
+        }
         public override double AreaCalculation()
         {
-            throw new NotImplementedException();
+            return LineA * LineB;
         }
 
         public override double Perimeter()
         {
-            throw new NotImplementedException();
-        }
-
-        public override string GetName()
-        {
-            return "Gamze";
+            return 2*(LineB + LineA);
         }
     }
-}
+
+       
+        
+    }
+

@@ -1,38 +1,33 @@
-﻿using System;
+﻿using Odev.Interfaces;
+using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net.Http.Headers;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace Odev
 {
-    public class Circle : Shape
+    public class Circle : Shape,IHasTwoDimension
     {
-        public double Pi
+        public double LineA { get { return LineB; } set { } }
+        public double LineB { get; set; }
+        public double Height { get; set; }
+        
+
+        public Circle(double Radius)
         {
-            get { return Math.PI; }
+            this.LineB = Radius;  
         }
-
-
-        //public double Radius { get; set; }
-
-        //public double AreaCalculation()
-        //{
-        //    return Math.PI * Radius * Radius;
-        //}
-
-        //public double Perimeter()
-        //{
-        //    return 2 * Math.PI * Radius;
-        //}
         public override double AreaCalculation()
         {
-            throw new NotImplementedException();
+            return Math.PI * LineA * LineA;
+         
         }
 
         public override double Perimeter()
         {
-            throw new NotImplementedException();
+            return Math.PI * 2 * LineA;
         }
     }
 }
