@@ -27,7 +27,7 @@ namespace Odev
 
         public override double AreaCalculation()
         {
-            return 0.5 * Height * LineC;
+            return 0.5 * Height * LineA;
         }
 
         public override double Perimeter()

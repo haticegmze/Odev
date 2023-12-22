@@ -8,14 +8,7 @@ namespace Odev
 {
     public abstract class Shape
     {
-      
-        
-
-
         public abstract double AreaCalculation();
         public abstract double Perimeter();
-       
-        
-        
     }
 }

@@ -21,13 +21,13 @@ namespace Odev
         }
         public override double AreaCalculation()
         {
-            return Math.PI * LineA * LineA;
+            return Math.PI * LineB * LineB;
          
         }
 
         public override double Perimeter()
         {
-            return Math.PI * 2 * LineA;
+            return Math.PI * 2 * LineB;
         }
     }
 }
